@@ -11,6 +11,7 @@ public class ProjecteduApplication {
 
 	@RequestMapping("/")
 	String home(){
+		int a = 1+1;
 		return "SSSSa";
 	}
 	public static void main(String[] args) {
