@@ -11,7 +11,7 @@ public class ProjecteduApplication {
 
 	@RequestMapping("/")
 	String home(){
-		return "Test";
+		return "SSSS";
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(ProjecteduApplication.class, args);
