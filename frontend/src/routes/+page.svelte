@@ -16,7 +16,7 @@
     <img src={lg} width="100"vspace="0" hspace="50">
     <div class="flex flex-row text-xl mt-11 text-stone-600" >
         <div class=" text-stone-900 font-bold" >CuteShop</div>
-        <div class=" ml-10" >Shop</div>
+        <div class=" ml-10a" >Shop</div>
         <div class=" ml-8" >About</div>
     </div>
         <div class="flex flex-row text-xl mt-8" >
