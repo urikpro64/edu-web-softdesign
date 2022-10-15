@@ -1,6 +1,10 @@
-package com.solfwaredesign.projectedu.users;
+package com.solfwaredesign.projectedu.models;
+
+import org.springframework.data.annotation.Id;
 
 public class UserResponse {
+
+    @Id
     private int id;
     private String name;
     private String email;
