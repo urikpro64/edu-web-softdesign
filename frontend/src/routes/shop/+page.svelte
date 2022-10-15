@@ -1,5 +1,4 @@
 <script lang="ts">
-    import ProductList from "../component/ProductList.svelte";
     let listProduct = ["1", "2", "3", "2", "3", "2", "3", "2", "3"];
     function allOfProduct(){
 
@@ -19,14 +18,7 @@
             <div class="px-3 ml-4 border-solid rounded-2xl border border-white" >Nhentai</div>
         </div>
     </div>
-
     
-    <div>
-        {#if listProduct.length}
-            <div class=" text-xl mt-5 mx-10 font-semibold" >Reccommend</div>
-            <ProductList isWrap={ false } listProduct={ listProduct }></ProductList>
-        {:else}
-            <div class="text-xl mt-5 mx-10 font-semibold text-center" >No Product in Store</div>
-        {/if}
-    </div>
 </div>
+
+
