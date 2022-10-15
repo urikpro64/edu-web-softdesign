@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  mongo:
+    image: mongo
+    container_name: mongo-projectedu
+    hostname: mongo
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_AUTO_INDEX_CREATION=true
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=thisisrootpassword
+      - MONGO_INITDB_DATABASE=projectedu
+      - MONGO_DB_USERNAME=urikpro64
+      - MONGO_DB_PASSWORD=thisispassword
+    volumes:
+      - ./mongodb/data:/data/db
+      - ./mongodb/log:/var/log/mongodb/
+      - ./mongodb/initdb.d:/docker-entrypoint-initdb.d/
+    command: ["--bind_ip", "0.0.0.0"]

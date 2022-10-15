@@ -1,5 +1,6 @@
-package com.solfwaredesign.projectedu.users;
+package com.solfwaredesign.projectedu.controller;
 
+import com.solfwaredesign.projectedu.models.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,7 +16,7 @@ public class UserControllerTest {
 
     @Test
     public void success_get_user_by_id_1(){
-        UserResponse result = restTemplate.getForObject("/users/1", UserResponse.class);
+        User result = restTemplate.getForObject("/users/1", User.class);
         assertEquals(1, result.getId());
         assertEquals("Pro", result.getName());
         assertEquals("urikpro64@gmail.com", result.getEmail());

@@ -1,26 +1,31 @@
 package com.solfwaredesign.projectedu.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-public class UserResponse {
+@Document("user")
+public class User {
 
     @Id
-    private int id;
+    private String id;
+    private String userID;
     private String name;
     private String email;
 
-    public UserResponse(int id, String name, String email) {
+    public User(String id, String userID, String name, String email) {
+        super();
         this.id = id;
+        this.userID = userID;
         this.name = name;
         this.email = email;
     }
 
-    public int getId() {
-        return id;
+    public String getUserID() {
+        return userID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUserID(String userID) {
+        this.userID = userID;
     }
 
     public String getName() {
@@ -38,4 +43,10 @@ public class UserResponse {
     public void setEmail(String email) {
         this.email = email;
     }
+
+//    @Override
+//    public String toString(){
+//        return String.format(
+//                "User[userID=%s, name='%s', email='%s']", userID, name, email);
+//    }
 }
