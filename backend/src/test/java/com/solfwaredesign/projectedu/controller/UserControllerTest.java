@@ -17,7 +17,7 @@ public class UserControllerTest {
     @Test
     public void success_get_user_by_id_1(){
         User result = restTemplate.getForObject("/users/1", User.class);
-        assertEquals(1, result.getId());
+        assertEquals(1, result.getID());
         assertEquals("Pro", result.getName());
         assertEquals("urikpro64@gmail.com", result.getEmail());
     }
