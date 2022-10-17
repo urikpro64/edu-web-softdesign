@@ -8,6 +8,7 @@ public class LoginValid {
     private String password;
 
     private boolean status;
+    private long userId;
 
     public LoginValid(String name, String password) {
         this.status = false;
@@ -39,11 +40,20 @@ public class LoginValid {
         this.status = status;
     }
 
+    public long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(long userId) {
+        this.userId = userId;
+    }
+
     public void login(List<User> users){
         for(User user:users){
             if(user.getName().equals(this.name)){
                 if(user.getPassword().equals(this.password)) {
                     this.status = true;
+                    this.userId = user.getID();
                     break;
                 }
             }
